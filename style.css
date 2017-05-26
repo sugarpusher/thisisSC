@@ -7,34 +7,41 @@
 */
 
 @font-face {
-  font-family: montserratultralight;
-  src: url(assets/fonts/Montserrat-UltraLight.ttf);
+  font-family: "Montserrat-Thin";
+  src: url(assets/fonts/Montserrat-Thin.ttf) format('truetype');
+  font-weight: 100;
 }
 @font-face {
-  font-family: montserrathairline;
-  src: url(assets/fonts/sc-fonts/Montserrat-Hairline.ttf);
+  font-family: "Montserrat-ExtraLight";
+  src: url(assets/fonts/Montserrat-ExtraLight.ttf) format('truetype');
+  font-weight: 200;
 }
 @font-face {
-  font-family: montserratlight;
-  src: url(assets/fonts/sc-fonts/Montserrat-Light.ttf);
+  font-family: "Montserrat-Light";
+  src: url(assets/fonts/Montserrat-Light.ttf) format('truetype');
+  font-weight: 300;
 }
 @font-face {
-  font-family: montserrat;
-  src: url(assets/fonts/sc-fonts/Montserrat-Regular.ttf);
+  font-family: "Montserrat-Regular";
+  src: url(assets/fonts/Montserrat-Regular.ttf) format('truetype');
+  font-weight: 400;
 }
 @font-face {
-  font-family: montserratsemibold;
-  src: url(assets/fonts/sc-fonts/Montserrat-SemiBold.ttf);
+  font-family: "Montserrat-SemiBold";
+  src: url(assets/fonts/Montserrat-SemiBold.ttf) format('truetype');
+  font-weight: 600;
 }
 @font-face {
-  font-family: montserratbold;
-  src: url(assets/fonts/sc-fonts/Montserrat-Bold.ttf);
+  font-family: "Montserrat-Bold";
+  src: url(assets/fonts/Montserrat-Bold.ttf) format('truetype');
+  font-weight: 700;
 }
 
 body {
 	background-color: #FAFAFA;
-  font-family: 'Montserrat', sans-serif;
-  color: #333333;
+  font-family: "Montserrat-Light";
+  color: #666666;
+  font-size: 16px;
   font-weight: 300;
   /*position: relative;
   top: 60px;*/
@@ -108,10 +115,10 @@ footer {
 section h2 {
   text-align: center;
   margin-bottom: 4rem;
-  font-weight: 200;
+  font-size: 30px;
+  color: #666666;
+  font-family: "Montserrat-ExtraLight";
 }
-
-
 
 #whatis h2, #token h2 {
   text-align: left;
@@ -119,6 +126,11 @@ section h2 {
 
 #whatis ol {
   padding-left: 18px;
+}
+
+#contentWhatIs {
+  /*background-color: #EFD96F;*/
+  /*color: #fff;*/
 }
 
 section h4 {
@@ -197,15 +209,16 @@ footer .card-img-top {
 }
 
 .card-title {
-  font-weight: 300;
+  font-family: "Montserrat-Light";
 }
 
 .illust {
   text-align: center;
 }
 
-.more {
+#body-wrap a.more {
   font-weight: 600;
+  color: #24B1FF;
 }
 
 .arrowUp {
@@ -239,12 +252,29 @@ footer .card-img-top {
 }
 
 footer, 
-footer a {
+footer a,
+footer a:hover {
   background-color: #f4f4f4;
-  color: #666666;
-  text-align: center;
+  color: #666666;  
   font-size: 0.8rem;
 }
+
+footer .footerlinks p, 
+footer .footerlinks a {
+  text-align: right;
+  line-height: 14px;
+  margin: 8px 0;
+}
+
+footer .footerlinks a {
+  border-bottom: 1px dotted #bfbfbf;
+  margin: 4px 0;
+}
+
+footer .fl1 p {
+  text-align: left;
+}
+
 
 footer .card-img-top {
   margin: 20px auto;
