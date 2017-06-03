@@ -31,12 +31,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 $(document).ready(function(){
 
-  $('.slider').slick({
+  $('.slider-top').slick({
     infinite: true,
     slidesToScroll: 1,
     slidesToShow: 3,
-    prevArrow: "<i class='fa fa-chevron-circle-left slick-prev' aria-hidden='true'></i>",
-    nextArrow: "<i class='fa fa-chevron-circle-right slick-next' aria-hidden='true'></i>",
+    centerMode: true,
+    autoplaySpeed: 5000,
+    asNavFor: ".slider-bottom",
+    prevArrow: "<i class='fa fa-angle-left slick-prev' aria-hidden='true'></i>",
+    nextArrow: "<i class='fa fa-angle-right slick-next' aria-hidden='true'></i>",
     responsive: [
     {
       breakpoint: 992,
@@ -47,12 +50,6 @@ $(document).ready(function(){
     {
       breakpoint: 768,
       settings: {
-        slidesToShow: 2
-      }
-    },
-    {
-      breakpoint: 576,
-      settings: {
         slidesToShow: 1
       }
     }
@@ -60,6 +57,15 @@ $(document).ready(function(){
     // settings: "unslick"
     // instead of a settings object
   ]
+  });
+
+  $('.slider-bottom').slick({
+    // infinite: true,
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    asNavFor: ".slider-top",
+    fade: true,
+    arrows: false
   });
 });
 

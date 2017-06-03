@@ -39,7 +39,7 @@
 
 body {
 	background-color: #FAFAFA;
-  font-family: "Montserrat-Light";
+  font-family: "Montserrat-Regular";
   color: #666666;
   font-size: 16px;
   font-weight: 300;
@@ -47,18 +47,23 @@ body {
   top: 60px;*/
 }
 
+.align-right {
+  text-align: right;
+}
+
 header {
   text-align: center;
-  /*background-color: #EFD96F;*/
+  background-color: #EFD96F;
+  /*background-color: #666666;*/
   border: none;
   padding: 1.3rem 1rem;
 }
 
 .p-bold {
-  font-weight: 600;
+  font-family: "Montserrat-SemiBold";
 }
 
-header .navbar {
+/*header .navbar {
   background-color: #EFD96F;
   border: none;
   padding: 1.3rem 1rem;
@@ -105,11 +110,21 @@ a.arrowUp {
 
 .navbar-toggler {
   cursor: pointer;
-}
+}*/
 
 main section,
 footer {
   padding: 6rem 1.25rem 4rem;
+}
+
+main section#whatis {
+  /*padding-bottom: 6rem;*/
+  padding-bottom: 0;
+}
+
+main section#whatis #headingWhatIs {
+  /*padding-bottom: 6rem;*/
+  padding-bottom: 0;
 }
 
 section h2 {
@@ -128,11 +143,6 @@ section h2 {
   padding-left: 18px;
 }
 
-#contentWhatIs {
-  background-color: #eeeeee;
-  /*color: #fff;*/
-}
-
 section h4 {
     font-size: 1.2rem;
     font-weight: 300;
@@ -142,14 +152,26 @@ div[class^='col-'] {
   margin-bottom: 2rem;
 }
 
+#whatis #contentWhatIs {
+  background-color: #EFD96F;
+  /*color: #fafafa;*/
+  margin: 0 -1.25rem;  
+}
+
+#whatis #contentWhatIs .card-block {
+  padding: 6rem 0;
+}
+
 #whatis #contentWhatIs .col-lg-6 {
   margin-bottom: 0;
 }
 
-#body-wrap .card-text a {
-  font-weight: 400;
-  /*color: #7AD69C;*/
-  color: #24B1FF;
+a {
+  font-family: "Montserrat-Bold";
+  color: #7AD69C;
+  /*color: #24B1FF;*/
+  font-size: 0.8rem;
+  border-bottom: 1px dotted #7AD69C;
 }
 #body-wrap .card-text {
   text-align: left;
@@ -165,14 +187,21 @@ div[class^='col-'] {
   text-align: center;
 }
 
-#people h2 {
+#body-wrap #people .card-text {  
+  font-size: 0.8rem;
+  font-family: "Montserrat-SemiBold";
+}
+
+#people h2,
+#history h2 {
   margin-bottom: 2rem;
 }
 
 #people h3 {  
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 300;
   margin-bottom: 1.5rem;
+  color: #bfbfbf;
 }
 
 #history,
@@ -199,26 +228,35 @@ div[class^='col-'] {
 
 #history .card-img-top,
 footer .card-img-top {
-  max-width: 60px;
-  margin: 20px 0;
+  max-width: 20px;
+  margin: 20px auto;
   opacity: 0.5
 }
 
-#history .card {
-  /*text-align: center;*/
+#history .card-text a,
+#token a {
+  font-family: "Montserrat-Regular";
+  /*color: #666666;*/
+  font-size: 1rem;
+  border-bottom: 1px dotted #666;
+}
+#history .card-text a:hover {
+  text-decoration: none;
 }
 
 .card-title {
   font-family: "Montserrat-Light";
 }
 
-.illust {
-  text-align: center;
+.graph {
+  margin: 0 auto 44px 50px;
+  /*display: block;*/
+  width: 230px;
+
 }
 
-#body-wrap a.more {
-  font-weight: 600;
-  color: #24B1FF;
+#body-wrap .more-p {
+  margin-bottom: 6.75rem;
 }
 
 .arrowUp {
@@ -227,6 +265,7 @@ footer .card-img-top {
   right: 30px;
   font-size: 46px;
   color: rgba(0,0,0,0.5);
+  z-index: 1000;
 }
 
 .slick-prev,
@@ -234,7 +273,8 @@ footer .card-img-top {
   font-size: 46px;
   color: rgba(0,0,0,0.3);
   position: absolute;  
-  top: 40%;
+  /*top: 40%;*/
+  top: 70px;
   cursor: pointer;
 }
 
@@ -251,6 +291,50 @@ footer .card-img-top {
   right: -35px;
 }
 
+.slider-top .slick-slide:not(.slick-current) .card-title {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  /*-webkit-transition: font-size 0.5s ease-in;
+  -moz-transition: font-size 0.5s ease-in;
+  -o-transition: font-size 0.5s ease-in;
+  -ms-transition: font-size 0.5s ease-in;*/
+  transition: transform 0.5s ease-out;
+}
+
+.slider-top .slick-current .card-title {
+  transform: scale(1.3);
+  transition: transform 0.5s ease-out;
+}
+
+.slider-top .card-block {
+  text-align: center;
+}
+
+
+
+.slider-top .fa-circle {
+  display: none;
+}
+
+.slider-bottom,
+.intro {
+  max-width: 500px;
+  margin: 0 auto;  
+}
+
+.intro {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#history .intro {
+  max-width: 380px;
+}
+
+#body-wrap .slider-bottom .card-block .card-text {
+  text-align: justify;
+}
+
 footer, 
 footer a,
 footer a:hover {
@@ -259,9 +343,50 @@ footer a:hover {
   font-size: 0.8rem;
 }
 
+footer .footer-top {
+  /*background-color: #333333;*/
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 2px dotted rgba(0,0,0,0.05);
+}
+
+footer .footer-top .btn-dark {
+  background-color: #eee;  
+  font-family: "Montserrat-SemiBold";
+  box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.5);
+  padding: 18px 24px;
+}
+
+footer .footer-top .btn-dark:hover {
+  font-size: 1rem;
+}
+
+footer .footer-top .btn-dark img {
+  width: 40px;
+  margin-right: 10px;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  vertical-align: middle;
+}
+
+footer div:not(.footerlinks) > p {
+  font-family: "Montserrat-SemiBold";
+}
+
 footer .footerlinks p, 
 footer .footerlinks a {
-  text-align: right;
+  text-align: left;
   line-height: 14px;
   margin: 8px 0;
 }
@@ -272,9 +397,8 @@ footer .footerlinks a {
 }
 
 footer .fl1 p {
-  text-align: left;
+  text-align: right;
 }
-
 
 footer .card-img-top {
   margin: 20px auto;
@@ -284,7 +408,25 @@ footer .card-img-top {
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
-
+  .slider-top .fa-circle {
+    display: inline-block;
+    font-size: 12px;
+    position: absolute;
+    top: 90px;
+    -ms-transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0); 
+    transform: translate(-50%,0);
+  }
+  .history-line {
+    position: absolute;
+    border-bottom: 1px solid #ddd;
+    width: 80%;
+    top: 260px;
+    left: 50%;
+    -ms-transform: translate(-50%,0); /* IE 9 */
+    -webkit-transform: translate-50%,0); /* Safari */
+    transform: translate(-50%,0);
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -318,7 +460,17 @@ footer .card-img-top {
     padding: 10px 30px;
   }
   #whatis #contentWhatIs .col-lg-6 {
-    margin-bottom: 2rem;
+    /*margin-bottom: 2rem;*/
+  }
+  .slick-prev,
+  .slick-next {
+    top: 50px;
+  }
+  .history-line {
+    top: 240px;
+  }
+  .slider-top .fa-circle {
+    top: 70px;
   }
 }
 
